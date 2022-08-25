@@ -1,0 +1,64 @@
+@import "../../assests/scss/variants.scss";
+
+
+.header {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.header-title {
+    margin-top   : 0px;
+    margin-bottom: 0px;
+    padding      : 16px;
+    font-size    : 35px;
+}
+
+.addTodo {
+    position: absolute;
+    height  : 100px;
+    display : flex;
+    bottom  : 50px;
+    left    : 0;
+    right   : 0;
+}
+
+.btn {
+    min-width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #fff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn__add {
+    height                    : 40px;
+    min-width                 : 40px;
+    width                     : 227px;
+    margin                    : 16px;
+    transition                : width 0.2s;
+    transition-timing-function: ease-out;
+
+    position: absolute;
+    top: 400px;
+
+    &:hover {
+
+        .noti__icon {
+            margin-right: 4px;
+        }
+
+        .text-add {
+            visibility: visible;
+            display   : inline-block;
+        }
+    }
+}
+
+.text-add {
+    display: none;
+}

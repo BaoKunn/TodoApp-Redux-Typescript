@@ -1,0 +1,9 @@
+export const autoClose = { autoClose: 600 }
+export const GET_DATA_SUCCESS = 'Get data success'
+export const GET_DATA_ERROR = 'Get data error'
+export const ADD_TODO_SUCCESS = 'Add todo success'
+export const ADD_TODO_ERROR = 'Add todo error'
+export const UPDATE_TODO_SUCCESS = 'Update todo success'
+export const UPDATE_TODO_ERROR = 'Update todo error'
+export const DELETE_TODO_SUCCESS = 'Delete todo success'
+export const DELETE_TODO_ERROR = 'Delete todo error'
