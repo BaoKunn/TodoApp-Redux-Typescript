@@ -4,7 +4,7 @@ import "./Modal.scss";
 
 interface IModal {
   isModalOpen: boolean,
-  setIsModalOpen: any,
+  setIsModalOpen: Function,
   children: any
 }
 

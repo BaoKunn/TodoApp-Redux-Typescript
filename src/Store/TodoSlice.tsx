@@ -8,10 +8,10 @@ import {
 } from "./Thunk";
 
 export interface ITodo {
-  id: any;
-  title: any;
-  deadline: any;
-  isCompleted: any;
+  id: number;
+  title: string;
+  deadline: string;
+  isCompleted: boolean;
   todoList: Array<object>;
   filter: string;
 }

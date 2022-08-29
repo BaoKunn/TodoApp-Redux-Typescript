@@ -2,7 +2,13 @@ import "./TabFilter.scss";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { IFilter, IState } from "../../Store/Store";
+import { IState } from "../../Store/Store";
+
+interface IFilter {
+  filterState: string,
+  setFilterState: Function,
+  todos: []
+}
 
 export default function TabFilter({ setFilterState }: IFilter) {
   const [status, setStatus] = useState("all");
@@ -39,7 +45,7 @@ export default function TabFilter({ setFilterState }: IFilter) {
         })}
         onClick={clickACtive}
       >
-        Active ({todoList.filter((todo: any) => todo.isCompleted === false).length})
+        Active ({todoList.filter((todo: IState) => todo.isCompleted === false).length})
       </button>
       <button
         className={classNames(" btn-filter", {
@@ -47,7 +53,7 @@ export default function TabFilter({ setFilterState }: IFilter) {
         })}
         onClick={clickComplete}
       >
-        Completed ({todoList.filter((todo: any) => todo.isCompleted === true).length}
+        Completed ({todoList.filter((todo: IState) => todo.isCompleted === true).length}
         )
       </button>
     </div>

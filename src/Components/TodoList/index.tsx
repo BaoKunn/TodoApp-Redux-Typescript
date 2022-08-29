@@ -23,7 +23,7 @@ export default function TodoList({ filterState, todos }: IProps) {
               : e.isCompleted === false || e.isCompleted === true
           )
           .map((todo: IState) => {
-            return <TodoItem key={todo.id} todoItem={todo} />;
+            return <TodoItem key={todo.id} todoItem={todo} deadline={""} />;
           })
           .reverse()
       )}

@@ -4,22 +4,16 @@ import TodoListSlice from "./TodoSlice";
 export interface IState {
   id: number;
   title: string;
-  deadline: any;
+  deadline: string;
   isCompleted: boolean;
-  todos: [],
-  list: [],
+  todos: [];
+  list: [];
 }
 
 export interface ITodo {
-  state: IState,
-  list: object,
+  state: IState;
+  list: object;
   todos: object;
-}
-
-export interface IFilter {
-  filterState: string,
-  setFilterState: Function,
-  todos: []
 }
 
 const store = configureStore({
@@ -28,6 +22,6 @@ const store = configureStore({
   },
 });
 
-export type RootState = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;

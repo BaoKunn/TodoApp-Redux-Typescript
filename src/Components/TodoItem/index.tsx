@@ -13,6 +13,7 @@ import "./TodoItem.scss";
 import { IState } from "../../Store/Store";
 
 interface IProps {
+  deadline: string;
   todoItem: IState
 }
 
@@ -21,7 +22,7 @@ export const TodoItem = ({ todoItem }: IProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [close, open] = useState(false);
 
-  const checkDeadline = (todoItem: any) => {
+  const checkDeadline = (todoItem: IState) => {
     if (todoItem.deadline) {
       const now = new Date();
       const deadline = new Date(todoItem?.deadline);

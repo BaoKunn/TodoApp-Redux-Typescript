@@ -5,7 +5,7 @@ import "./TodoForm.scss";
 
 interface IForm {
   title: string,
-  setIsModalOpen: any,
+  setIsModalOpen: Function,
   todoItem: any,
 }
 

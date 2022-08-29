@@ -3,8 +3,14 @@ import "./DeleteItem.scss";
 import classNames from "classnames";
 import { useDispatch } from "react-redux";
 import { deleteTodoThunk } from "../../Store/Thunk";
+import { IState } from "../../Store/Store";
+ interface IDelete {
+  todoItem: IState,
+  close: boolean,
+  open: Function,
+}
 
-const ModalDelete = ({ todoItem, close, open }: any) => {
+const ModalDelete = ({ todoItem, close, open }: IDelete) => {
   const dispatch = useDispatch();
   const handleClickDelete = () => {
     dispatch(deleteTodoThunk(todoItem.id));
